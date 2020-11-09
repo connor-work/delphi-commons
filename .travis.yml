@@ -31,11 +31,11 @@ before_script:
 
 stages:
     - name: release test
-      if: type != pull_request AND branch = master
+      if: type != pull_request AND branch = main
     - name: publish
-      if: type != pull_request AND branch = master
+      if: type != pull_request AND branch = main
     - name: development test
-      if: type = pull_request OR branch != master
+      if: type = pull_request OR branch != main
 
 jobs:
     include:
