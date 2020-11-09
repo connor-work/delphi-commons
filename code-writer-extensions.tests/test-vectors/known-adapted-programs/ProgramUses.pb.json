@@ -1,0 +1,26 @@
+{
+    "heading": "ProgramUses",
+    "includeFiles": [
+        "Work.Connor.Delphi.CompilerFeatures.inc"
+    ],
+    "usesClause": [
+        {
+            "element": {
+                "unit": {
+                    "unit": "Classes",
+                    "namespace": [
+                        "System"
+                    ]
+                }
+            },
+            "alternativeElement": {
+                "unit": {
+                    "unit": "Classes"
+                }
+            },
+            "condition": {
+                "symbol": "WORK_CONNOR_DELPHI_COMPILER_UNIT_SCOPE_NAMES"
+            }
+        }
+    ]
+}

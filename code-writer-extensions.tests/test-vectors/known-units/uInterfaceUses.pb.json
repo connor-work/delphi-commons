@@ -1,0 +1,20 @@
+{
+    "heading": {
+        "unit": "uInterfaceUses"
+    },
+    "interface": {
+        "usesClause": [
+            {
+                "element": {
+                    "unit": {
+                        "unit": "Classes",
+                        "namespace": [
+                            "System"
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "implementation": {}
+}
