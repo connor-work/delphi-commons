@@ -1,0 +1,48 @@
+{
+    "heading": {
+        "unit": "uAttributes"
+    },
+    "includeFiles": [
+        "Work.Connor.Delphi.CompilerFeatures.inc"
+    ],
+    "interface": {
+        "declarations": [
+            {
+                "classDeclaration": {
+                    "name": "ClassX",
+                    "nestedDeclarations": [
+                        {
+                            "member": {
+                                "fieldDeclaration": {
+                                    "name": "FieldX",
+                                    "type": "Integer"
+                                },
+                                "attributeAnnotations": [
+                                    {
+                                        "element": {
+                                            "attribute": "volatile"
+                                        },
+                                        "condition": {
+                                            "symbol": "WORK_CONNOR_DELPHI_COMPILER_CUSTOM_ATTRIBUTES"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "attributeAnnotations": [
+                        {
+                            "element": {
+                                "attribute": "volatile"
+                            },
+                            "condition": {
+                                "symbol": "WORK_CONNOR_DELPHI_COMPILER_CUSTOM_ATTRIBUTES"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "implementation": {}
+}

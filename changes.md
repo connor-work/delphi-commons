@@ -47,7 +47,7 @@ This file tracks significant changes to the project setup that are not easily re
 8. Added SonarAnalyzer for static code analysis to `code-writer-extensions` project.
 
     ```powershell
-    dotnet add code-writer-extensions package SonarAnalyzer.CSharp --version 88.14.0.22654
+    dotnet add code-writer-extensions package SonarAnalyzer.CSharp --version 8.14.0.22654
     ```
 
 9. Created a *[manifest file](https://docs.microsoft.com/en-us/dotnet/core/tools/local-tools-how-to-use)* for .NET Core local tools.
@@ -56,29 +56,8 @@ This file tracks significant changes to the project setup that are not easily re
     dotnet new tool-manifest
     ```
 
-10. Installed [`dotnet-grpc`](https://docs.microsoft.com/en-us/aspnet/core/grpc/dotnet-grpc?view=aspnetcore-3.1) tool to manage protobuf references.
+10. Added `code-writer-extensions` project as a dependency of its test project `code-writer-extensions.tests`.
 
     ```powershell
-    dotnet tool install dotnet-grpc
+    dotnet add code-writer-extensions.tests reference code-writer-extensions
     ```
-
-11. Added first protobuf reference using `dotnet-grpc` to the `code-writer` project. Further reference additions do not need to be tracked here.
-Note that this tool silently fails when invoked from the top level with `--project` reference (we consider this a bug).
-
-    ```powershell
-    cd code-writer
-    dotnet grpc add-file --services None --access Public ..\proto\work\connor\delphi\source-code.proto
-    ```
-
-12. Added `code-writer` project as a dependency of its test project `code-writer.tests`.
-
-    ```powershell
-    dotnet add code-writer.tests reference code-writer
-    ```
-
-13. Upgraded fixed .NET Core SDK version.
-
-    ```powershell
-    dotnet new globaljson --sdk-version $(($(dotnet --list-sdks | tail -1) -split ' ')[0]) --force
-    ```
-

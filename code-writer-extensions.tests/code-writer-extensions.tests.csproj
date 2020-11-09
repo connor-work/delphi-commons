@@ -20,4 +20,18 @@
   <ItemGroup>
     <ProjectReference Include="../code-writer-extensions/code-writer-extensions.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <!-- Known protobuf messages in JSON-encoded files that define expected adapted Delphi unit source code, each has a corresponding unadapted message -->
+    <EmbeddedResource Include="test-vectors/known-adapted-units/*.pb.json" LogicalName="[known adapted unit message]%(Filename)%(Extension)" />
+    <!-- Known protobuf messages in JSON-encoded files that define expected adapted Delphi program source code, each has a corresponding unadapted message -->
+    <EmbeddedResource Include="test-vectors/known-adapted-programs/*.pb.json" LogicalName="[known adapted program message]%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Known protobuf messages in JSON-encoded files that represent Delphi unit source code -->
+    <EmbeddedResource Include="test-vectors/known-units/*.pb.json" LogicalName="[known unit message]%(Filename)%(Extension)" />
+    <!-- Known protobuf messages in JSON-encoded files that represent Delphi program source code -->
+    <EmbeddedResource Include="test-vectors/known-programs/*.pb.json" LogicalName="[known program message]%(Filename)%(Extension)" />
+  </ItemGroup>
 </Project>

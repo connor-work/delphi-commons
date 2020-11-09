@@ -1,0 +1,39 @@
+{
+    "heading": {
+        "unit": "uAttributes"
+    },
+    "interface": {
+        "declarations": [
+            {
+                "classDeclaration": {
+                    "name": "ClassX",
+                    "nestedDeclarations": [
+                        {
+                            "member": {
+                                "fieldDeclaration": {
+                                    "name": "FieldX",
+                                    "type": "Integer"
+                                },
+                                "attributeAnnotations": [
+                                    {
+                                        "element": {
+                                            "attribute": "volatile"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "attributeAnnotations": [
+                        {
+                            "element": {
+                                "attribute": "volatile"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "implementation": {}
+}
